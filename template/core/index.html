@@ -13,15 +13,15 @@
   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 <style>
   .sidebar {
-    border: 1px solid black;
-    border-radius: 20px;
+    border-radius: 2px;
     padding: 20px;
     height: 100vh;
     position: fixed;
     overflow-y: auto;
     width: 250px;
     max-height: 85%;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   .content {
     padding: 15px;
@@ -44,6 +44,11 @@
     height: 100px;
     overflow-y: auto;
     scrollbar-width: thin;
+  }
+  .card-text ul {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
   }
   @media (max-width: 768px) {
     .sidebar {
@@ -252,53 +257,16 @@
             <img src=".\media\cars\baleno.jpg" class="card-img-top" alt="..." />
             <div
               class="card-body"
-              style="border-top: 2px solid blue; border-radius: 10px">
-              <h5 class="card-title">2022 Tata NEXON XMA SUNROOF PETROL</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div
-            class="card h-100 p-2"
-            style="
-              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-                0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            ">
-            <img src=".\media\cars\baleno.jpg" class="card-img-top" alt="..." />
-            <div
-              class="card-body"
-              style="border-top: 2px solid blue; border-radius: 10px">
-              <h5 class="card-title">2022 Tata NEXON XMA SUNROOF PETROL</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div
-            class="card h-100 p-2"
-            style="
-              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-                0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            ">
-            <img src=".\media\cars\baleno.jpg" class="card-img-top" alt="..." />
-            <div
-              class="card-body"
-              style="border-top: 2px solid blue; border-radius: 10px">
-              <h5 class="card-title">2022 Tata NEXON XMA SUNROOF PETROL</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
+              style="border-top: 2px solid gray; border-radius: 10px">
+              <h6 class="card-title">2016 Maruti Suzuki Baleno Alpha</h6>
+              <div class="card-text">
+                <ul>
+                  <li style="list-style: none">45k km</li>
+                  <li>Petrol</li>
+                  <li>Automatic</li>
+                </ul>
+                <h5><i class="bi bi-currency-rupee"></i> 4.95 Lakh</h5>
+              </div>
             </div>
           </div>
         </div>
@@ -313,12 +281,61 @@
             <div
               class="card-body"
               style="border-top: 2px solid gray; border-radius: 10px">
-              <h5 class="card-title">2022 Tata NEXON XMA SUNROOF PETROL</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
+              <h6 class="card-title">2016 Maruti Suzuki Baleno Alpha</h6>
+              <div class="card-text">
+                <ul>
+                  <li style="list-style: none">45k km</li>
+                  <li>Petrol</li>
+                  <li>Automatic</li>
+                </ul>
+                <h5><i class="bi bi-currency-rupee"></i> 4.95 Lakh</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card h-100 p-2"
+            style="
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ">
+            <img src=".\media\cars\baleno.jpg" class="card-img-top" alt="..." />
+            <div
+              class="card-body"
+              style="border-top: 2px solid gray; border-radius: 10px">
+              <h6 class="card-title">2016 Maruti Suzuki Baleno Alpha</h6>
+              <div class="card-text">
+                <ul>
+                  <li style="list-style: none">45k km</li>
+                  <li>Petrol</li>
+                  <li>Automatic</li>
+                </ul>
+                <h5><i class="bi bi-currency-rupee"></i> 4.95 Lakh</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card h-100 p-2"
+            style="
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ">
+            <img src=".\media\cars\baleno.jpg" class="card-img-top" alt="..." />
+            <div
+              class="card-body"
+              style="border-top: 2px solid gray; border-radius: 10px">
+              <h6 class="card-title">2016 Maruti Suzuki Baleno Alpha</h6>
+              <div class="card-text">
+                <ul>
+                  <li style="list-style: none">45k km</li>
+                  <li>Petrol</li>
+                  <li>Automatic</li>
+                </ul>
+                <h5><i class="bi bi-currency-rupee"></i> 4.95 Lakh</h5>
+              </div>
             </div>
           </div>
         </div>
