@@ -20,11 +20,11 @@
       class="navbar fixed-top navbar-expand-lg"
       style="background-color: #e8e8e8">
       <div class="container">
-        <a class="navbar-brand font-monospace" href="#"
+        <a class="navbar-brand font-monospace" style="font-size: 2rem" href="#"
           ><i
             class="bi bi-car-front-fill"
             style="font-size: 2rem; color: red"></i>
-          SHOPCART</a
+          MH07</a
         >
         <!--search box -->
         <input
@@ -70,7 +70,11 @@
               <ul
                 class="dropdown-menu dropdown-menu-light dropdown-menu-end"
                 style="z-index: 1050">
-                <li><a class="dropdown-item" href="#">Your Account</a></li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'user:user_login' %}"
+                    >Your Account</a
+                  >
+                </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
                   <a class="dropdown-item text-danger" href="#">Logout</a>

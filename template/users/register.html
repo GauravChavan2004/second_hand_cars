@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'static/css/register.css' %}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  </head>
+  <body>
+    {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+      <script defer>
+        alert('{{message}}');
+      </script>
+
+      {% endfor %}
+    </ul>
+    {% endif %} {% if messages %}
+    <!-- Hidden element to store the message -->
+    <ul class="list-unstyled d-none">
+      {% for message in messages %}
+      <li class="django-message" data-message="{{ message }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <div class="container" style="max-width: 25%">
+      <div class="forms">
+        <div class="form login">
+          <span class="title">Registration</span>
+          <form method="POST">
+            {% csrf_token %}
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="Enter First Name"
+                name="first_name"
+                id="email"
+                required />
+              <i class="bi bi-person-fill"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="Enter Last Name"
+                name="last_name"
+                id="email"
+                required />
+              <i class="bi bi-person-fill"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="email"
+                placeholder="Enter email"
+                name="email"
+                id="email"
+                required />
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="Enter Username"
+                name="username"
+                id="email"
+                required />
+              <i class="bi bi-person-circle"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="password"
+                placeholder="Enter Password"
+                name="password1"
+                id="psw"
+                required />
+              <i class="bi bi-person-fill-lock"></i>
+            </div>
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" onclick="myFunction()" />
+                <label for="logCheck" class="text">Show Password</label>
+              </div>
+            </div>
+            <div id="message">
+              <p style="color: #fff; margin-top: 10px">
+                Password must contain the following:
+              </p>
+
+              <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+              <p id="capital" class="invalid">
+                A <b>capital (uppercase)</b> letter
+              </p>
+              <p id="number" class="invalid">A <b>number</b></p>
+              <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+            </div>
+            <div class="input-field">
+              <input
+                type="password"
+                placeholder="Repeat Password"
+                name="password2"
+                id="psw-repeat"
+                required />
+              <i class="bi bi-person-fill-lock"></i>
+            </div>
+            <div class="input-field button">
+              <button type="submit" id="login-btn" class="input">
+                Register Now
+              </button>
+            </div>
+          </form>
+          <p class="text-center mt-3" style="color: #ffffffbe">
+            Already have an account?
+            <a
+              href="{% url 'user:user_login' %}"
+              style="text-decoration: none; color: #7594e9">
+              Login</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script src="{% static 'static/js/register.js' %}"></script>
+  </body>
+</html>
