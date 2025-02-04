@@ -17,20 +17,20 @@ def user_register(request):
         # Check if passwords match
         if password1 != password2:
             messages.error(request, 'Passwords do not match')
-            return redirect('user_register')
+            return redirect('users/user_register')
         
         # Check if username or email already exists
         if User.objects.filter(username=username).exists():
             messages.error(request, 'Username already taken')
-            return redirect('user_register')
+            return redirect('users_url:user_register')
         elif User.objects.filter(email=email).exists():
             messages.error(request, 'Email is already registered')
-            return redirect('user_register')
+            return redirect('users_url:user_register')
 
         data=User.objects.create_user(first_name=first_name,last_name=last_name,email=email,username=username,password=password1)
         data.save()
         messages.success(request, 'Account created successfully. You can now log in.')
-        return redirect('user_login')
+        return redirect('users_url:user_login')
     return render(request, 'users/register.html')
 
 def user_login(request):
@@ -45,11 +45,11 @@ def user_login(request):
             return redirect('/')
         else:
             messages.error(request, 'Invalid username and password !!')
-            return redirect('user_login')
+            return redirect('users_url:user_login')
         
     return render(request, 'users/login.html')
 
 def user_logout(request):
     logout(request)
     messages.success(request, "You have successfully logged out.")
-    return redirect('user_login')
+    return redirect('users_url:user_login')

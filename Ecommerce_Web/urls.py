@@ -2,7 +2,7 @@
 URL configuration for Ecommerce_Web project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
+    https://docs.djangoproject.com/en/5.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -18,11 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('core.core_url')),
     path('user/',include('users.users_url' , namespace='user')),
+    path('car_view/',views.car_view, name="car_view")
 ]
 
 if settings.DEBUG: 
