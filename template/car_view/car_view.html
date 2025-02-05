@@ -8,24 +8,29 @@
   crossorigin="anonymous" />
 <style>
   .car_heading_details {
-    border: 2px solid black;
+    box-shadow: 0 5px 10px rgba(7, 7, 7, 0.53);
     border-radius: 10px;
   }
   .car_heading_details h6 {
-    font-size: 14px;
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 </style>
-<div class="container p-3" style="margin-top: 100px; border: 2px solid black">
+<div class="container p-3" style="margin-top: 100px">
   <div class="row" style="margin-bottom: 20px">
-    <div class="col-7">
+    <div class="col-7 ms-2 me-2">
       <div
         id="carouselExample"
         class="carousel carousel-dark slide w-100"
         style="border-radius: 15px">
-        <div class="carousel-inner">
+        <div class="carousel-inner" style="border-radius: 10px">
           <div class="carousel-item active">
             <img
-              src="..\media\cars\baleno.jpg"
+              src="..\media\cars\baleno1.jpg"
               class="d-block w-100"
               alt="Baleno Image" />
           </div>
@@ -54,14 +59,79 @@
           </button>
         </div>
       </div>
+      <h3 class="mt-5">Know your car</h3>
+      <div class="car_info">
+        <div class="row justify-content-around">
+          <div class="col">
+            Reg year<br />
+            Aug 2020
+          </div>
+          <div class="col">
+            Reg year<br />
+            Aug 2020
+          </div>
+          <div class="col">
+            Reg year<br />
+            Aug 2020
+          </div>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col">
+            Reg year<br />
+            Aug 2020
+          </div>
+          <div class="col">
+            Reg year<br />
+            Aug 2020
+          </div>
+          <div class="col">
+            Reg year<br />
+            Aug 2020
+          </div>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col">
+            Reg year<br />
+            Aug 2020
+          </div>
+          <div class="col">
+            Reg year<br />
+            Aug 2020
+          </div>
+          <div class="col">
+            Reg year<br />
+            Aug 2020
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="car_heading_details col p-4">
-      <h4 class="mt-5">2020 Maruti Baleno ZETA PETROL 1.2</h4>
+    <div class="car_heading_details col p-4 ms-2 me-2">
+      <h3 class="mt-4">2020 Maruti Baleno ZETA PETROL 1.2</h3>
       <div class="row text-center mt-4">
         <h6 class="col">57000 KM</h6>
         <h6 class="col">1ST OWNER</h6>
         <h6 class="col">PETROL</h6>
         <h6 class="col">MANUAL</h6>
+      </div>
+      <p class="mt-3" style="color: rgb(0, 81, 255)">
+        <i class="bi bi-geo-alt-fill"></i> Parked at: Kandivali, Mumbai
+      </p>
+      <p
+        style="margin-top: -12px; color: rgb(0, 81, 255)"
+        class="border-bottom pb-4">
+        <i class="bi bi-car-front-fill"></i> Test Drive: Available
+      </p>
+      <h2><i class="bi bi-currency-rupee"></i>5,20,000</h2>
+      <p>
+        + other charges:
+        <i class="bi bi-currency-rupee" style="font-size: 14px"></i>4,000
+      </p>
+      <div class="row text-center">
+        <button type="button" class="col btn btn-primary m-3">BOOK NOW</button>
+
+        <button type="button" class="col btn btn-danger ps-5 pe-5 p-3 m-3">
+          FREE TEST DRIVE
+        </button>
       </div>
     </div>
     <div>
