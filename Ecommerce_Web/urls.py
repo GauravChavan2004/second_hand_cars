@@ -22,9 +22,8 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('core.core_url')),
+    path('',include('core.core_url', namespace="core")),
     path('user/',include('users.users_url' , namespace='user')),
-    path('car_view/',views.car_view, name="car_view")
 ]
 
 if settings.DEBUG: 

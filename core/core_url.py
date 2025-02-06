@@ -6,7 +6,9 @@ from django.conf.urls.static import static
 app_name= 'core_url'
 urlpatterns = [
     path('',views.index ),
-    
+    path('home_page/',views.home_page, name="home_page"),
+    path('car_view/',views.car_view, name="car_view")
+
 ] 
 if settings.DEBUG: 
     urlpatterns += static(settings.MEDIA_URL,
