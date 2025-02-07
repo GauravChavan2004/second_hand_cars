@@ -141,8 +141,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 
 JAZZMIN_SETTINGS={
-    'site_header': "Grow Mart",
-    'site_brand': "Grow Mart",
-    'site_logo': "media\logo\logo_grow_mart.jpg",
-    'copyright':"grow-mart.com",
+    'site_header': "One Point Car Mall",
+    'site_brand': "One Point Car Mall",
+    'site_logo': "media\logo\Car Logo 1 (1).png",
+    'copyright':"one-point-car-mall.com",
 }
